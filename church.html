@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script&display=swap" rel="stylesheet">
+  
+  <title>Efatha Church - Welcome</title>
+     
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-white text-blue-700 p-4 fixed w-full top-0 z-20 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="profile_pic.png" alt="Logo" class="w-12 h-12 rounded-full" />
+      <div class="border-l-2 border-blue-300 h-8 mx-4"></div>
+      <span class="text-2xl font-bold">Our Church</span>
+    </div>
+    <div class="hidden md:flex gap-6">
+      <a href="#about" class="text-blue-700 hover:text-blue-900 transition duration-300">About</a>
+      <a href="#events" class="text-blue-700 hover:text-blue-900 transition duration-300">Events</a>
+      <a href="#contact" class="text-blue-700 hover:text-blue-900 transition duration-300">Contact</a>
+    </div>
+    <button class="md:hidden text-blue-700 focus:outline-none" onclick="toggleMenu()">☰</button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-blue-100 p-4 transition-all duration-300 ease-in-out">
+    <a href="#about" class="block text-blue-700 py-2">About</a>
+    <a href="#events" class="block text-blue-700 py-2">Events</a>
+    <a href="#contact" class="block text-blue-700 py-2">Contact</a>
+  </div>
+</nav>
+
+<!-- Countdown Hero Section -->
+<section id="countdown" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('/path-to/1.jpeg');">
+    <!-- Dark Blur Overlay -->
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-md"></div>
+    
+    <div class="relative z-10 text-center text-white">
+      <h2 class="text-5xl md:text-6xl font-extrabold mb-8 animate-fade-in drop-shadow-lg">
+        Live Stream Starts In:
+      </h2>
+  
+      <div id="countdown-timer" class="flex justify-center gap-6 md:gap-12">
+        <!-- Days -->
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-28 md:w-28 md:h-32 bg-white/20 backdrop-blur-xl rounded-xl shadow-lg flex items-center justify-center text-5xl md:text-6xl font-bold text-blue-300">
+            <span id="days">00</span>
+          </div>
+          <span class="text-sm uppercase mt-2 text-gray-300">Days</span>
+        </div>
+  
+        <!-- Hours -->
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-28 md:w-28 md:h-32 bg-white/20 backdrop-blur-xl rounded-xl shadow-lg flex items-center justify-center text-5xl md:text-6xl font-bold text-blue-300">
+            <span id="hours">00</span>
+          </div>
+          <span class="text-sm uppercase mt-2 text-gray-300">Hours</span>
+        </div>
+  
+        <!-- Minutes -->
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-28 md:w-28 md:h-32 bg-white/20 backdrop-blur-xl rounded-xl shadow-lg flex items-center justify-center text-5xl md:text-6xl font-bold text-blue-300">
+            <span id="minutes">00</span>
+          </div>
+          <span class="text-sm uppercase mt-2 text-gray-300">Minutes</span>
+        </div>
+  
+        <!-- Seconds -->
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-28 md:w-28 md:h-32 bg-white/20 backdrop-blur-xl rounded-xl shadow-lg flex items-center justify-center text-5xl md:text-6xl font-bold text-blue-300">
+            <span id="seconds">00</span>
+          </div>
+          <span class="text-sm uppercase mt-2 text-gray-300">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Cards Section (Hidden on Small Screens) -->
+<section class="hidden sm:flex py-4 gap-3 justify-center">
+  <div class="w-64 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+    <img src="Kanisa_slide1.png" alt="Slide 1" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold">Card Title 1</h3>
+    </div>
+  </div>
+  
+  <div class="w-64 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+    <img src="Kanisa_slide2.jpg" alt="Slide 2" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold">Card Title 2</h3>
+    </div>
+  </div>
+  <div class="w-64 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+    <img src="Kanisa_slide1.png" alt="Slide 1" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold">Card Title 1</h3>
+    </div>
+  </div>
+  
+  <div class="w-64 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+    <img src="Kanisa_slide2.jpg" alt="Slide 2" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold">Card Title 2</h3>
+    </div>
+  </div>
+  <div class="w-64 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+    <img src="Kanisa_slide1.png" alt="Slide 1" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold">Card Title 1</h3>
+    </div>
+  </div>
+  
+  <div class="w-64 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+    <img src="Kanisa_slide2.jpg" alt="Slide 2" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold">Card Title 2</h3>
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24">
+    <div class="container mx-auto text-center">
+      <h2 class="text-5xl font-bold text-gray-800 mb-6">✨ About Our Church</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        We welcome you with open arms! Our mission is to create a loving community filled with faith, hope, and worship.
+      </p>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-24">
+    <div class="container mx-auto text-center">
+      <h2 class="text-5xl font-bold text-blue-700 mb-6">🌈 Upcoming Events</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass p-6 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-700">Sunday Worship</h3>
+          <p class="text-gray-600 mt-2">Every Sunday at 10:00 AM</p>
+        </div>
+        <div class="glass p-6 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-700">Youth Fellowship</h3>
+          <p class="text-gray-600 mt-2">Fridays at 6:00 PM</p>
+        </div>
+        <div class="glass p-6 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-700">Prayer Night</h3>
+          <p class="text-gray-600 mt-2">Wednesdays at 7:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+<footer class="bg-blue-100 text-blue-700 py-6 text-center">
+  <p>&copy; 2025 Our Church. All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  function getNextSunday() {
+    const now = new Date();
+    let nextSunday = new Date(now);
+    nextSunday.setDate(now.getDate() + (7 - now.getDay()) % 7);
+    nextSunday.setHours(8, 0, 0, 0);
+
+    if (now >= nextSunday) {
+      nextSunday.setDate(nextSunday.getDate() + 7);
+    }
+
+    return nextSunday;
+  }
+
+  function updateCountdown() {
+    const targetDate = getNextSunday();
+    const now = new Date();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+      document.getElementById('countdown-timer').innerHTML =
+        '<span class="text-2xl font-bold text-red-600">🚨 Live Stream is Starting!</span>';
+      return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / (1000 * 60)) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    document.getElementById('days').innerText = String(days).padStart(2, '0');
+    document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+    document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+    document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  }
+</script>
+</body>
+</html>

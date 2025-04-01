@@ -1,1 +1,0 @@
-# stationery_control
