@@ -8,7 +8,6 @@ if (!isset($_SESSION['id'], $_SESSION['user'], $_SESSION['user_email'], $_SESSIO
     header("Location: index.php");
     exit();
 }
-
 // Update the last activity timestamp
 $_SESSION['last_activity'] = time();
 
